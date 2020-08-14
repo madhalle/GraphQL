@@ -8,9 +8,9 @@ var schema = buildSchema(`
     users(shark: String): [Person]
   },
   type Person {
-    id: Int!
+    id: Int
     name: String
-    age: Int!
+    age: Int
     shark: String
   }
 `);
@@ -19,36 +19,36 @@ var users = [
   {
     id: 1,
     name: 'Brian',
-    age: 21,
+    age: '21',
     shark: 'Great White Shark'
   },
   {
     id: 2,
     name: 'Kim',
-    age: 22,
+    age: '22',
     shark: 'Whale Shark'
   },
   {
     id: 3,
     name: 'Faith',
-    age: 23,
+    age: '23',
     shark: 'Hammerhead Shark'
   },{
     id: 4,
     name: 'Joseph',
-    age: 23,
+    age: '23',
     shark: 'Tiger Shark'
   },
   {
     id: 5,
     name: 'Joy',
-    age: 25,
+    age: '25',
     shark: 'Hammerhead Shark'
   },
 ];
 
 var getUser = function(args){
-  var UserID = args.id;
+  var userID = args.id;
   return users.filter(user => user.id == userID)[0];
 }
 
